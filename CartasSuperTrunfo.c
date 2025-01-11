@@ -19,10 +19,15 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
     // Variáveis
-    char estado, codigocarta, nomecidade[40];
-    int populacao, numptosturisticos;
-    float areakm, PIB;
+    char estado[40];
+    char codigocarta[3];
+    char nomecidade[40];
+    int populacao;
+    int numptosturisticos;
+    float areakm;
+    float PIB;
 
+    // Iniciar Variáveis
     populacao = 1;
     numptosturisticos = 1;
     areakm = 1;
@@ -30,19 +35,26 @@ int main() {
 
     // Entrada de dados
     printf("Digite o estado: \n");
-    scanf ("%s", &estado);
+    scanf(" %[^\n]s", estado);
+
     printf("Digite o código da carta: \n");
-    scanf ("%3s", &codigocarta);
+    scanf(" %3s", codigocarta);
+
     printf("Digite o nome da cidade: \n");
-    scanf ("%s", &nomecidade);
+    scanf(" %[^\n]", nomecidade);
+
     printf("Digite a população: \n");
-    scanf ("%d", &populacao);
+    scanf(" %d", &populacao);
+
     printf("Digite a Área em Km2: \n");
-    scanf ("%f", &areakm);
+    scanf(" %f", &areakm);
+
     printf("Digite o PIB: \n");
-    scanf ("%f", &PIB);
+    scanf(" %f", &PIB);
+
     printf("Digite o número de pontos turísticos: \n");
-    scanf ("%d", &numptosturisticos);
+    scanf(" %d", &numptosturisticos);
+
 
     // Exibição dos dados cadastrados
     printf("\n--- Dados Cadastrados ---\n");
@@ -53,7 +65,6 @@ int main() {
     printf("Área em Km2: %.2f\n", areakm);
     printf("PIB: %.2f\n", PIB);
     printf("Número de pontos turísticos: %d\n", numptosturisticos);
-
 
     return 0;
 }
